@@ -1,0 +1,54 @@
+{
+  "name": "danwebb-portfolio",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-static start",
+    "stage": "react-static build --staging",
+    "build": "react-static build",
+    "serve": "serve dist -p 3000"
+  },
+  "xo": {
+    "extends": "xo-react",
+    "parser": "babel-eslint",
+    "globals": [
+      "window",
+      "document",
+      "fetch"
+    ],
+    "rules": {
+      "import/no-unresolved": 0,
+      "camelcase": 0,
+      "new-cap": [
+        "error",
+        {
+          "capIsNew": false
+        }
+      ]
+    }
+  },
+  "babel": {
+    "extends": "react-static/.babelrc",
+    "plugins": [
+      "babel-plugin-styled-components"
+    ]
+  },
+  "dependencies": {
+    "prop-types": "^15",
+    "react": "^16",
+    "react-dom": "^16",
+    "react-hot-loader": "^3",
+    "react-router": "^4.2.0",
+    "react-static": "^5",
+    "styled-components": "^3"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.3.0",
+    "babel-eslint": "7.2.3",
+    "eslint-config-react-tools": "1.x.x",
+    "eslint-config-xo-react": "0.13.0",
+    "serve": "^6.1.0",
+    "xo": "^0.20"
+  }
+}
