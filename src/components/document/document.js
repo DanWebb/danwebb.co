@@ -1,12 +1,5 @@
 import React from 'react';
 import {any, node, object} from 'prop-types';
-import {injectGlobal} from 'styled-components';
-import {globalStyles} from '../../theme/theme';
-
-// eslint-disable-next-line no-unused-expressions
-injectGlobal`
-	${globalStyles}
-`;
 
 const Document = ({Html, Head, Body, children, renderMeta}) => (
 	<Html>
