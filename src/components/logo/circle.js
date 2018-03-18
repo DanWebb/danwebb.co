@@ -5,8 +5,8 @@ const Circle = styled.div`
 	border: 3px solid ${color.white};
 	border-radius: 50%;
 	display: inline-block;
-	height: 30px;
-	width: 30px;
+	height: 25px;
+	width: 25px;
 `;
 
 export default Circle;

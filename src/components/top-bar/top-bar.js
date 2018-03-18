@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-static';
-import Circle from './circle';
+import Circle from '../logo/circle';
 import Bar from './bar';
 
 const TopBar = () => (
