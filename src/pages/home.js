@@ -2,8 +2,11 @@ import React from 'react';
 import Layout from '../components/layout/layout';
 import Introduction from '../components/introduction/introduction';
 import Project from '../components/project/project';
+import Testimonial from '../components/testimonial/testimonial';
+
 import rachaelHallLarge from '../../public/rachael-hall-large.jpg';
 import rachaelHallSmall from '../../public/rachael-hall-small.jpg';
+import sunsideStudio from '../../public/sunside-studio.png';
 
 const Home = () => (
 	<Layout>
@@ -25,6 +28,15 @@ const Home = () => (
 				]
 			}}
 		/>
+		<Testimonial author="Jennie Lewis" logo={sunsideStudio} url="http://www.hellosunside.com/">
+			I&apos;ve worked with Dan on a number of projects now and without hesitation he is {' '}
+			one of the suppliers I most enjoy working with. He takes all the stress out of projects {' '}
+			for me - explains everything in a way which I understand and keeps the projects running far {' '}
+			more smoothly than I could ever manage. His work is always faultless, he has incredible {' '}
+			attention to detail and top communication skills. You can find many talented developers {' '}
+			but the ones that are as organised and as pro-active as Dan are priceless. I don&apos;t {' '}
+			know what I&apos;d do without him.
+		</Testimonial>
 	</Layout>
 );
 
