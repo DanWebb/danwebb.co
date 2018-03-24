@@ -8,7 +8,7 @@ const Document = ({Html, Head, Body, children, renderMeta}) => (
 			<meta httpEquiv="x-ua-compatible" content="ie=edge"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
-			<title>React Static - Website Starter</title>
+			<title>danwebb</title>
 			<meta name="description" content=""/>
 			<meta itemProp="name" content=""/>
 			<meta itemProp="url" content=""/>

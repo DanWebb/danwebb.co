@@ -1,22 +1,26 @@
 import React from 'react';
-import {node, string} from 'prop-types';
+import {node, string, bool} from 'prop-types';
 import Arrow from './arrow';
 import StyledButton from './styled-button';
 
-const Button = ({children, href}) => (
-	<StyledButton href={href}>
+const Button = ({children, href, secondary, small}) => (
+	<StyledButton href={href} secondary={secondary} small={small}>
 		{children}
-		<Arrow/>
+		{!secondary && <Arrow/>}
 	</StyledButton>
 );
 
 Button.propTypes = {
 	children: node.isRequired,
-	href: string
+	href: string,
+	secondary: bool,
+	small: bool
 };
 
 Button.defaultProps = {
-	href: ''
+	href: '',
+	secondary: false,
+	small: false
 };
 
 export default Button;

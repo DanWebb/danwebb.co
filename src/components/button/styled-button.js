@@ -28,10 +28,10 @@ const StyledButton = styled.a`
 	padding: 12px 20px 12px;
 	max-width: 194px;
 	font-weight: ${font.bold};
-	background: ${props => color[props.background]};
 	color: ${props => color[props.color]};
 
 	svg {
+		display: ${props => props.secondary ? 'none' : 'block'};
 		position: absolute;
 		top: 7px;
 		right: 10px;
@@ -50,11 +50,33 @@ const StyledButton = styled.a`
 		transform-origin: 59% 59%;
 	}
 
-	${breakpoint('small', `
-		font-size: 14px;
-		padding: 15px 20px 16px;
+	${props => props.secondary ? `
+		background: transparent;
+		border: 2px solid ${color[props.background]};
+		color: ${color[props.background]};
+		text-align: center;
+	` : `
+		background: ${color[props.background]};
+	`}
+
+	${props => props.small && `
+		font-size: 12px;
+		width: 100%;
+		max-width: 100%;
+	`}
+
+	${props => breakpoint('small', `
+		${props.small ? `
+			font-size: 12px;
+			width: auto;
+			max-width: 194px;
+			padding: 10px 30px 10px;
+		` : `
+			font-size: 14px;
+			padding: 15px 20px 16px;
+		`}
 		max-width: 235px;
-		
+
 		svg {
 			top: 9px;
 	    right: 12px;
