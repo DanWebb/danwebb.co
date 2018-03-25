@@ -12,7 +12,7 @@ const Project = ({image, mobileImage, background, description, right}) => (
 		<BackgroundBox color={background} right={right}/>
 		<Wrap>
 			<ContentBox background={background} {...description} right={right}/>
-			<MacWindow image={image} mobileImage={mobileImage} alt={description.title}/>
+			<MacWindow image={image} mobileImage={mobileImage} alt={description.title} right={right}/>
 		</Wrap>
 	</Section>
 );

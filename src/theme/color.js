@@ -6,7 +6,8 @@ const color = {
 	green: '#7ed321',
 	ice: '#b7e7dc',
 	lemon: '#f8e71c',
-	concrete: '#f3f3f3'
+	concrete: '#f3f3f3',
+	potPourri: '#f4e8e2'
 };
 
 export default color;

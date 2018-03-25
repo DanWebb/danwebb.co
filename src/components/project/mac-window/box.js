@@ -7,10 +7,15 @@ const Box = styled.div`
 	z-index: 1;
 	margin-top: -50px;
 
-	${breakpoint('medium', `
+	${props => breakpoint('medium', `
 		border: 1px solid ${color.concrete};
 		border-radius: 6px;
-		margin-left: 58px;
+
+		${props.right ? `
+			margin-right: 58px;
+		` : `
+			margin-left: 58px;
+		`};
 	`)}
 `;
 
