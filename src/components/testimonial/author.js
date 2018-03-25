@@ -7,12 +7,16 @@ const Author = styled.div`
 	font-size: 20px;
 	font-weight: ${font.bold};
 	text-transform: uppercase;
-	margin-top: 20px;
+	margin-top: 23px;
+	display: flex;
+	align-items: center;
 
 	span {
-		position: relative;
-		top: -20px;
-		padding-right: 5px;
+		padding: 0 10px 5px 0;
+	}
+
+	img {
+		display: block;
 	}
 `;
 

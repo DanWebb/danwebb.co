@@ -31,7 +31,11 @@ const Home = () => (
 				]
 			}}
 		/>
-		<Testimonial author="Jennie Lewis" logo={sunsideStudio} url="http://www.hellosunside.com/">
+		<Testimonial
+			author="Jennie Lewis"
+			logo={{src: sunsideStudio, width: 100, height: 47, alt: 'Sunside Studio'}}
+			url="http://www.hellosunside.com/"
+		>
 			I&apos;ve worked with Dan on a number of projects now and without hesitation he is one of the suppliers I most enjoy working with. He takes all the stress out of projects for me - explains everything in a way which I understand and keeps the projects running far more smoothly than I could ever manage. His work is always faultless, he has incredible attention to detail and top communication skills. You can find many talented developers but the ones that are as organised and as pro-active as Dan are priceless. I don&apos;t know what I&apos;d do without him.
 		</Testimonial>
 		<Project
@@ -51,7 +55,11 @@ const Home = () => (
 			}}
 			right
 		/>
-		<Testimonial author="Elaine Mitchell" logo={studio1850} url="https://studio1850.com/">
+		<Testimonial
+			author="Elaine Mitchell"
+			logo={{src: studio1850, width: 147, height: 20, alt: 'Studio 1850'}}
+			url="https://studio1850.com/"
+		>
 			Dan has been the most joyous web developer I&apos;ve ever had the pleasure to work with – my usual response to developer emails is opening them with eyes half hidden behind my hands, but each of his emails has left me with a huge smile. Nothing has been too much trouble, time is taken to graciously ensure everything is explained simply and in an easy to understand manner. Projects that once filled me with dread and ate into more than my budgeted time can now be elegantly managed, designed and built – I finally feel I can offer clients the websites they deserve, and in a stress free and profitable way.
 			<br/><br/>
 			Honestly, hire him, a thousand times over. I could not be more impressed and more thankful for his management, understanding, clarity, and of course his beautiful development skills.

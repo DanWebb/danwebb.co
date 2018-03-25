@@ -8,7 +8,7 @@ const Section = styled.section`
 
 
 	${breakpoint('small', `
-		padding: 125px 30px;
+		padding: 130px 30px;
 	`)}
 `;
 
