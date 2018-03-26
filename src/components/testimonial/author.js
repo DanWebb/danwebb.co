@@ -17,6 +17,7 @@ const Author = styled.div`
 
 	img {
 		display: block;
+		height: auto;
 	}
 `;
 

@@ -1,5 +1,5 @@
 const breakpoints = {
-	small: 500,
+	small: 550,
 	medium: 834,
 	large: 1000
 };

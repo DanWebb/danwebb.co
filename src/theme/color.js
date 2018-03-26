@@ -7,7 +7,9 @@ const color = {
 	ice: '#b7e7dc',
 	lemon: '#f8e71c',
 	concrete: '#f3f3f3',
-	potPourri: '#f4e8e2'
+	potPourri: '#f4e8e2',
+	witchHaze: '#fff68f',
+	buttermilk: '#fff5b1'
 };
 
 export default color;
