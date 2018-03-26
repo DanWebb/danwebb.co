@@ -4,7 +4,7 @@ import breakpoint from '../../theme/breakpoint';
 const Section = styled.section`
 	max-width: 1055px;
 	margin: 0 auto;
-	padding: 50px 30px;
+	padding: 50px 30px 100px 30px;
 
 
 	${breakpoint('small', `

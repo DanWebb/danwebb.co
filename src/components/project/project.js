@@ -11,8 +11,8 @@ const Project = ({image, mobileImage, background, description, right}) => (
 	<Section>
 		<BackgroundBox color={background} right={right}/>
 		<Wrap>
-			<ContentBox background={background} {...description} right={right}/>
 			<MacWindow image={image} mobileImage={mobileImage} alt={description.title} right={right}/>
+			<ContentBox background={background} {...description} right={right}/>
 		</Wrap>
 	</Section>
 );

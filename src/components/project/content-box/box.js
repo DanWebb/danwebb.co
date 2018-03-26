@@ -10,7 +10,7 @@ const Box = styled.div`
 	width: calc(100% - 30px);
 	max-width: 345px;
 	position: relative;
-  top: -70px;
+  top: -100px;
 	margin: 55px auto 0 auto;
 
 	&::before,
