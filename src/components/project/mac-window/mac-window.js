@@ -7,7 +7,10 @@ import Image from './image';
 const MacWindow = ({image, mobileImage, alt, right}) => (
 	<Box right={right}>
 		<Bar/>
-		<Image src={mobileImage || image} srcSet={`${mobileImage || image} 600w, ${image} 1500w`} alt={alt}/>
+		<picture>
+			<source media="(min-width: 834px)" srcSet={image}/>
+			<Image src={mobileImage || image} alt={alt}/>
+		</picture>
 	</Box>
 );
 

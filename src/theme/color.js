@@ -9,7 +9,10 @@ const color = {
 	concrete: '#f3f3f3',
 	potPourri: '#f4e8e2',
 	witchHaze: '#fff68f',
-	buttermilk: '#fff5b1'
+	buttermilk: '#fff5b1',
+	inspiraBlue: '#009ee2',
+	twitterBlue: '#1da1f2',
+	instagramPurple: '#bc2a8d'
 };
 
 export default color;

@@ -32,6 +32,10 @@ const globalStyles = `
 		background: ${color.red};
 		color: ${color.white};
 	}
+
+	a {
+		text-decoration: none;
+	}
 `;
 
 export default globalStyles;

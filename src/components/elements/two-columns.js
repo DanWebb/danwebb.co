@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import breakpoint from '../../theme/breakpoint';
 
 const TwoColumns = styled.div`
-	${breakpoint('small', `
+	${breakpoint('medium', `
 		display: flex;
 
 		> div {

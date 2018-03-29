@@ -31,7 +31,7 @@ Span.propTypes = {
 
 Span.defaultProps = {
 	color: color.black,
-	font: font.regular,
+	weight: font.regular,
 	size: {small: '16px', large: '20px'}
 };
 

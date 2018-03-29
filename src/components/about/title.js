@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import font from '../../theme/font';
+import color from '../../theme/color';
 import breakpoint from '../../theme/breakpoint';
 
-const subtitle = styled.h3`
-	font-size: 40px;
+const Title = styled.h2`
+	color: ${color.red};
 	font-weight: ${font.bold};
-	letter-spacing: 7px;
+	font-size: 48px;
+	letter-spacing: 3px;
 	text-transform: uppercase;
-	margin-top: 40px;
 
-	${breakpoint('medium', `
-		margin-top: 0;
-		font-size: 48px;
+	${breakpoint('small', `
+		font-size: 80px;
 	`)}
 `;
 
-export default subtitle;
+export default Title;
