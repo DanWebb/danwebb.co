@@ -14,7 +14,7 @@ const Divider = styled.div`
 Divider.propTypes = {
 	color: colorType,
 	width: string,
-	padding: string,
+	spacing: string,
 	centered: bool
 };
 

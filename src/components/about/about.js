@@ -8,7 +8,7 @@ import Title from './title';
 import Content from './content';
 import Image from './image';
 import whoIAm from './who-i-am.jpg';
-import whoIAmMob from './who-i-am-mob.jpg'
+import whoIAmMob from './who-i-am-mob.jpg';
 
 const About = () => (
 	<Section>

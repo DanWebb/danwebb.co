@@ -87,13 +87,8 @@ const StyledButton = styled.a`
 `;
 
 StyledButton.propTypes = {
-	color: colorType,
-	background: colorType
-};
-
-StyledButton.defaultProps = {
-	color: 'white',
-	background: 'red'
+	color: colorType.isRequired,
+	background: colorType.isRequired
 };
 
 export default StyledButton;
