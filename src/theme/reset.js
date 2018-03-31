@@ -100,6 +100,13 @@ const reset = `
 	}
 
 	input,
+	textarea,
+	select,
+	button {
+		font-family: inherit;
+	}
+
+	input,
 	select {
 	  vertical-align: middle;
 	}

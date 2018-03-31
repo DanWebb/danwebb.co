@@ -1,4 +1,5 @@
 import React from 'react';
+import settings from '../../theme/settings';
 import Logo from '../logo/logo';
 import Span from '../elements/span';
 import Button from '../button/button';
@@ -13,7 +14,7 @@ const Introduction = () => (
 			simple, focussed and understandable ways which make sure I consistently create the {' '}
 			greatest experiences that exceed desired results.
 		</p>
-		<Button>Work with me</Button>
+		<Button href={`mailto:${settings.email}`}>Work with me</Button>
 	</Section>
 );
 

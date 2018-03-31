@@ -1,4 +1,5 @@
 import React from 'react';
+import settings from '../../theme/settings';
 import Button from '../button/button';
 import Circle from './circle';
 import Section from './section';
@@ -13,7 +14,9 @@ const Cta = () => (
 			<Title>Create something great</Title>
 			<Divider/>
 			<Content>Need a hand with something and think we’ll be a good match?</Content>
-			<Button background="white" color="red">Work with me</Button>
+			<Button href={`mailto:${settings.email}`} background="white" color="red">
+				Work with me
+			</Button>
 		</div>
 	</Section>
 );

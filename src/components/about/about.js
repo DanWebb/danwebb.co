@@ -1,4 +1,5 @@
 import React from 'react';
+import {breakpoints} from '../../theme/breakpoint';
 import TwoColumns from '../elements/two-columns';
 import Span from '../elements/span';
 import Divider from '../divider/divider';
@@ -35,7 +36,7 @@ const About = () => (
 
 			<Image>
 				<picture>
-					<source media="(min-width: 834px)" srcSet={whoIAm}/>
+					<source media={`(min-width: ${breakpoints.medium}px)`} srcSet={whoIAm}/>
 					<img src={whoIAmMob} alt="Who I am" width="615" height="909"/>
 				</picture>
 			</Image>

@@ -5,7 +5,6 @@ import Project from '../components/project/project';
 import Testimonial from '../components/testimonial/testimonial';
 import Services from '../components/services/services';
 import About from '../components/about/about';
-import Cta from '../components/cta/cta';
 
 import rachaelHallLarge from '../../public/rachael-hall-large.jpg';
 import rachaelHallSmall from '../../public/rachael-hall-small.jpg';
@@ -74,7 +73,6 @@ const Home = () => (
 
 		<Services/>
 		<About/>
-		<Cta/>
 	</Layout>
 );
 
