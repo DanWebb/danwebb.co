@@ -13,6 +13,11 @@ const Button = styled.button`
 	padding: 6px 0;
 	margin-left: -1px;
 	width: 60px;
+
+	&:focus,
+	&:active {
+		outline: 0;
+	}
 `;
 
 export default Button;

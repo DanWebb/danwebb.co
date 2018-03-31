@@ -30,8 +30,8 @@ Span.propTypes = {
 };
 
 Span.defaultProps = {
-	color: color.black,
-	weight: font.regular,
+	color: 'black',
+	weight: 'regular',
 	size: {small: '16px', large: '20px'}
 };
 
