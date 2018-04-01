@@ -9,29 +9,36 @@ const Document = ({Html, Head, Body, children, renderMeta}) => (
 			<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
 			<title>danwebb</title>
-			<meta name="description" content=""/>
-			<meta itemProp="name" content=""/>
-			<meta itemProp="url" content=""/>
-			<meta itemProp="image" content=""/>
-			<meta itemProp="thumbnailUrl" content=""/>
-			<link rel="image_src" href=""/>
+			<meta name="description" content="Dan Webb - coder, thinker, maker, explorer. Create something great."/>
+			<meta itemProp="name" content="danwebb"/>
+			<meta itemProp="url" content="https://danwebb.co"/>
+			<meta itemProp="image" content="https://danwebb.co/fb-logo.png"/>
+			<meta itemProp="thumbnailUrl" content="https://danwebb.co/square-logo.png"/>
+			<link rel="image_src" href="https://danwebb.co/fb-logo.png"/>
 
-			<link rel="icon" type="image/x-icon" href=""/>
+			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+			<link rel="manifest" href="/site.webmanifest"/>
+			<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f9415d"/>
+			<meta name="msapplication-TileColor" content="#f9415d"/>
+			<meta name="theme-color" content="#f9415d"/>
 
-			<meta property="og:site_name" content=""/>
-			<meta property="og:title" content=""/>
-			<meta property="og:url" content=""/>
-			<meta property="og:type" content=""/>
-			<meta property="og:description" content=""/>
-			<meta property="og:image" content=""/>
-			<meta property="og:image:width" content=""/>
-			<meta property="og:image:height" content=""/>
+			<meta property="og:site_name" content="danwebb.co"/>
+			<meta property="og:title" content="danwebb"/>
+			<meta property="og:url" content="https://danwebb.co"/>
+			<meta property="og:type" content="website"/>
+			<meta property="og:description" content="Dan Webb - coder, thinker, maker, explorer. Create something great."/>
+			<meta property="og:image" content="https://danwebb.co/fb-logo.png"/>
+			<meta property="og:image:width" content="1200"/>
+			<meta property="og:image:height" content="630"/>
 
-			<meta name="twitter:title" content=""/>
-			<meta name="twitter:image" content=""/>
-			<meta name="twitter:url" content=""/>
+			<meta name="twitter:title" content="danwebb"/>
+			<meta name="twitter:creator" content="@danwebbbb">
+			<meta name="twitter:image" content="https://danwebb.co/square-logo.png"/>
+			<meta name="twitter:url" content="https://danwebb.co"/>
 			<meta name="twitter:card" content="summary"/>
-			<meta name="twitter:description" content=""/>
+			<meta name="twitter:description" content="Dan Webb - coder, thinker, maker, explorer. Create something great."/>
 
 			{renderMeta.styleTags}
 		</Head>
