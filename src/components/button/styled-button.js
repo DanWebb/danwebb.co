@@ -5,13 +5,8 @@ import breakpoint from '../../theme/breakpoint';
 import {colorType} from '../../types';
 
 const rotate = keyframes`
-	from {
-		transform: rotate(110deg);
-	}
-
-	to {
-		transform: rotate(470deg);
-	}
+	from { transform: rotate(110deg); }
+	to { transform: rotate(470deg); }
 `;
 
 const StyledButton = styled.a`
@@ -55,6 +50,30 @@ const StyledButton = styled.a`
 		border: 2px solid ${color[props.background]};
 		color: ${color[props.background]};
 		text-align: center;
+		position: relative;
+		overflow: hidden;
+		transition: color 0.3s;
+
+		&::after {
+			content: '';
+			background: ${color[props.background]}
+			width: 0;
+			height: 150px;
+			transform: translateX(-50%) translateY(-50%) rotate(50deg);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: -1;
+	    transition: width 0.3s;
+		}
+
+		&:hover {
+			color: ${color.white};
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
 	` : `
 		background: ${color[props.background]};
 	`}
