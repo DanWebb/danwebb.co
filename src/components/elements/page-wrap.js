@@ -6,7 +6,7 @@ const PageWrap = styled.section`
 	padding: 140px 30px 160px 30px;
 	text-align: left;
 
-	p {
+	p, ul {
 		margin-bottom: 30px;
 	}
 `;

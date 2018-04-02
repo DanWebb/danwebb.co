@@ -7,6 +7,9 @@ const getRoutes = () => [{
 	path: '/',
 	component: 'src/pages/home'
 }, {
+	path: '/privacy-policy',
+	component: 'src/pages/privacy-policy'
+}, {
 	is404: true,
 	component: 'src/pages/not-found'
 }];

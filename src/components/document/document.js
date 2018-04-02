@@ -1,5 +1,6 @@
 import React from 'react';
 import {any, node, object} from 'prop-types';
+import gtag from '../../modules/gtag.js';
 
 const Document = ({Html, Head, Body, children, renderMeta}) => (
 	<Html>
@@ -34,11 +35,14 @@ const Document = ({Html, Head, Body, children, renderMeta}) => (
 			<meta property="og:image:height" content="630"/>
 
 			<meta name="twitter:title" content="danwebb"/>
-			<meta name="twitter:creator" content="@danwebbbb">
+			<meta name="twitter:creator" content="@danwebbbb"/>
 			<meta name="twitter:image" content="https://danwebb.co/square-logo.png"/>
 			<meta name="twitter:url" content="https://danwebb.co"/>
 			<meta name="twitter:card" content="summary"/>
 			<meta name="twitter:description" content="Dan Webb - coder, thinker, maker, explorer. Create something great."/>
+
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116654469-1"/>
+			<script dangerouslySetInnerHTML={{__html: gtag}}/>
 
 			{renderMeta.styleTags}
 		</Head>

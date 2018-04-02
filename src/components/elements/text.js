@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import color from '../../theme/color';
 import font from '../../theme/font';
+import breakpoint from '../../theme/breakpoint';
 
 const Text = styled.div`
 	h2, a {
@@ -8,7 +9,7 @@ const Text = styled.div`
 	}
 
 	h2, h3 {
-		font-size: 26px;
+		font-size: 22px;
 		font-weight: ${font.bold};
 		text-transform: uppercase;
 		letter-spacing: 3px;
@@ -16,7 +17,7 @@ const Text = styled.div`
 	}
 
 	h3 {
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: ${font.regular};
 		letter-spacing: 2px;
 	}
@@ -46,6 +47,16 @@ const Text = styled.div`
 		left: -1.1225em;
 		padding-right: 0;
 	}
+
+	${breakpoint('small', `
+		h2 {
+			font-size: 26px;
+		}
+
+		h3 {
+			font-size: 20px;
+		}
+	`)}
 `;
 
 export default Text;

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-static';
-import Span from '../components/elements/span';
 import PageLayout from '../components/layout/page-layout';
 
 const NotFound = () => (
