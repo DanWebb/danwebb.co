@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import color from '../../theme/color';
 import font from '../../theme/font';
+import breakpoint from '../../theme/breakpoint';
 
 const Author = styled.div`
 	color: ${color.red};
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: ${font.bold};
 	text-transform: uppercase;
 	margin-top: 23px;
@@ -19,6 +20,10 @@ const Author = styled.div`
 		display: block;
 		height: auto;
 	}
+
+	${breakpoint('small', `
+		font-size: 20px;
+	`)}
 `;
 
 export default Author;
