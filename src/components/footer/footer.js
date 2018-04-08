@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-static';
 import settings from '../../theme/settings';
 import Logo from '../logo/dw-logo';
+import A, {InternalLink} from '../elements/a';
 import Divider from '../divider/divider';
 import Mobile from '../elements/mobile';
 import Desktop from '../elements/desktop';
@@ -27,10 +28,10 @@ const Footer = () => (
 
 			<div>
 				<Nav>
-					<li><Link to="/journal">Journal</Link></li>
-					<li><a href={settings.social.github} target="_blank" rel="noopener noreferrer">Github</a></li>
-					<li><a href={settings.social.instagram} target="_blank" rel="noopener noreferrer">Instagram</a></li>
-					<li><a href={settings.social.twitter} target="_blank" rel="noopener noreferrer">Twitter</a></li>
+					<li><InternalLink to="/journal" color="white">Journal</InternalLink></li>
+					<li><A href={settings.social.github} color="white" external>Github</A></li>
+					<li><A href={settings.social.instagram} color="white" external>Instagram</A></li>
+					<li><A href={settings.social.twitter} color="white" external>Twitter</A></li>
 				</Nav>
 
 				<Desktop>

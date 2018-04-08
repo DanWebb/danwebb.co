@@ -1,5 +1,6 @@
 import React from 'react';
 import {breakpoints} from '../../theme/breakpoint';
+import A from '../elements/a';
 import TwoColumns from '../elements/two-columns';
 import Span from '../elements/span';
 import Divider from '../divider/divider';
@@ -24,13 +25,13 @@ const About = () => (
 					</Span>
 				</p>
 				<p>
-					Recently I was at <a href="http://www.inspiradigital.co.uk/" rel="noopener noreferrer" target="_blank"><Span weight="semiBold" color="inspiraBlue">Inspira Digital</Span></a> for 5 years, the last 3 of which were spent as lead developer managing a team whilst still taking on my own projects.
+					Recently I was at <A href="http://www.inspiradigital.co.uk/" color="inspiraBlue" external>Inspira Digital</A> for 5 years, the last 3 of which were spent as lead developer managing a team whilst still taking on my own projects.
 				</p>
 				<p>
 					These days I’m focussed on helping my clients build great websites/applications and grow businesses as a freelance web developer as well as creating software products of my own.
 				</p>
 				<p>
-					For the latest updates sign up for my newsletter below or see what I’m up to on <a href="https://twitter.com/danwebbbb" rel="noopener noreferrer" target="_blank"><Span weight="semiBold" color="twitterBlue">Twitter</Span></a> and <a href="https://www.instagram.com/danwebbbbb/" rel="noopener noreferrer" target="_blank"><Span weight="semiBold" color="instagramPurple">Instagram</Span></a>.
+					For the latest updates sign up for my newsletter below or see what I’m up to on <A href="https://twitter.com/danwebbbb" color="twitterBlue" external>Twitter</A> and <A href="https://www.instagram.com/danwebbbbb/" color="instagramPurple" external>Instagram</A>.
 				</p>
 			</Content>
 
