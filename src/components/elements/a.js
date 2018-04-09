@@ -13,13 +13,14 @@ const StyledA = styled.a`
 	position: relative;
 	display: inline-block;
 
-	${breakpoint('small', `
+	${props => breakpoint('small', `
 		&::after {
-			background: ${props => color[props.color]};
+			background: ${color[props.color]};
+			opacity: 0.4;
 			border-radius: 3px;
 			content: '';
 			display: block;
-			height: 1px;
+			height: 2px;
 			width: 0;
 			position: absolute;
 			bottom: -2px;
