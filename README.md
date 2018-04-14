@@ -1,10 +1,9 @@
 <h1 align="center">
 	<br>
-	<br>
 	<img width="100%" src="https://file-juluzoytxw.now.sh" alt="chalk">
 	<br>
 	<br>
 </h1>
 
-# [danwebb.co](https://danwebb.co)
+## [danwebb.co](https://danwebb.co)
 > Personal website of Dan Webb
