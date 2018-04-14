@@ -23,7 +23,7 @@ class Tool extends Component {
 					<Tooltip
 						title={name}
 						description={description}
-						showTip={showTip && description}
+						showTip={showTip && description > ''}
 					/>
 				</a>
 			</Logo>

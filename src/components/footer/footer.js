@@ -37,7 +37,7 @@ const Footer = () => (
 				<Desktop>
 					<Subnav>
 						<li><a href={`mailto:${settings.email}`}>{settings.email}</a></li>
-						<li><Link to="/privacy-policy">privacy policy</Link></li>
+						<li><Link to="/pages/privacy-policy">privacy policy</Link></li>
 					</Subnav>
 
 					<Divider color="white" centered={false} spacing="20px" thickness="1px"/>

@@ -48,6 +48,11 @@ const Text = styled.div`
 		padding-right: 0;
 	}
 
+	strong {
+		color: ${color.red};
+		font-weight: ${font.extraBold};
+	}
+
 	${breakpoint('small', `
 		h2 {
 			font-size: 26px;

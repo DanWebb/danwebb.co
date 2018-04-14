@@ -12,7 +12,7 @@ const Testimonial = ({children, author, logo, url}) => (
 		<Wrap>
 			<Quote/>
 			<Content>
-				<p>{children}</p>
+				{children}
 				<Author>
 					<span>{author} -</span>
 					<a href={url} target="_blank" rel="noopener noreferrer">

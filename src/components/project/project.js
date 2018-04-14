@@ -1,5 +1,5 @@
 import React from 'react';
-import {string, shape, array, bool} from 'prop-types';
+import {string, array, bool} from 'prop-types';
 import {colorType} from '../../types';
 import Section from './section';
 import BackgroundBox from './background-box';
@@ -7,12 +7,12 @@ import Wrap from './wrap';
 import MacWindow from './mac-window/mac-window';
 import ContentBox from './content-box/content-box';
 
-const Project = ({image, mobileImage, background, description, right}) => (
+const Project = props => (
 	<Section>
-		<BackgroundBox color={background} right={right}/>
+		<BackgroundBox color={props.color} right={props.right}/>
 		<Wrap>
-			<MacWindow image={image} mobileImage={mobileImage} alt={description.title} right={right}/>
-			<ContentBox background={background} {...description} right={right}/>
+			<MacWindow image={props.image} mobileImage={props.mobileImage} alt={props.title} right={props.right}/>
+			<ContentBox {...props}/>
 		</Wrap>
 	</Section>
 );
@@ -20,21 +20,21 @@ const Project = ({image, mobileImage, background, description, right}) => (
 Project.propTypes = {
 	image: string.isRequired,
 	mobileImage: string,
-	background: colorType,
-	description: shape({
-		title: string.isRequired,
-		spec: string.isRequired,
-		content: string.isRequired,
-		visit: string,
-		caseStudy: string,
-		tools: array
-	}).isRequired,
+	color: colorType,
+	title: string.isRequired,
+	spec: string.isRequired,
+	summary: string.isRequired,
+	visit: string.isRequired,
+	tools: array,
+	hasCaseStudy: bool,
 	right: bool
 };
 
 Project.defaultProps = {
-	background: 'ice',
+	color: 'ice',
 	mobileImage: '',
+	tools: [],
+	hasCaseStudy: false,
 	right: false
 };
 

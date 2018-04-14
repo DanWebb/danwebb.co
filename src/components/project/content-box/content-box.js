@@ -10,12 +10,12 @@ import Spec from './spec';
 import Content from './content';
 import Buttons from './buttons';
 
-const ContentBox = ({background, title, spec, content, visit, caseStudy, tools, right}) => (
-	<Box background={background} right={right}>
+const ContentBox = ({color, title, spec, summary, visit, caseStudy, tools, right}) => (
+	<Box background={color} right={right}>
 		<Divider color="red" width="60px" centered={false}/>
 		<Title>{title}</Title>
 		<Spec>{spec}</Spec>
-		<Content>{content}</Content>
+		<Content>{summary}</Content>
 
 		{(visit || caseStudy) && (
 			<Buttons>
@@ -29,10 +29,10 @@ const ContentBox = ({background, title, spec, content, visit, caseStudy, tools, 
 );
 
 ContentBox.propTypes = {
-	background: colorType.isRequired,
+	color: colorType.isRequired,
 	title: string.isRequired,
 	spec: string.isRequired,
-	content: string.isRequired,
+	summary: string.isRequired,
 	visit: string,
 	caseStudy: string,
 	tools: array,
