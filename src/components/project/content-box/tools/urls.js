@@ -4,7 +4,7 @@ const urls = {
 	node: 'https://nodejs.org/en/',
 	prismic: 'https://prismic.io/',
 	react: 'https://reactjs.org/',
-	shopify: 'https://www.shopify.com/',
+	shopify: 'https://www.shopify.com/?ref=danwebb1',
 	stripe: 'https://stripe.com/gb'
 };
 
