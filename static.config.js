@@ -1,8 +1,10 @@
+import {reloadRoutes} from 'react-static/node';
 import jdown from 'jdown';
+import chokidar from 'chokidar';
 import Document from './src/components/document/document';
 import renderToHtml from './src/modules/render-styles';
 
-const getSiteData = () => ({title: 'Dan Webb'});
+chokidar.watch('src/content').on('all', () => reloadRoutes());
 
 const getRoutes = async () => {
 	const content = await jdown('src/content');
@@ -25,7 +27,6 @@ const getRoutes = async () => {
 };
 
 export default {
-	getSiteData,
 	getRoutes,
 	renderToHtml,
 	Document
