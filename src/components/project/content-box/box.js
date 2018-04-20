@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import posed from 'react-pose';
 import {spring} from 'popmotion';
+import {number} from 'prop-types';
 import color from '../../../theme/color';
 import {colorType} from '../../../types';
 import breakpoint from '../../../theme/breakpoint';
@@ -51,7 +52,8 @@ const Box = styled(posed.div({
 `;
 
 Box.propTypes = {
-	background: colorType.isRequired
+	background: colorType.isRequired,
+	right: number.isRequired
 };
 
 export default Box;

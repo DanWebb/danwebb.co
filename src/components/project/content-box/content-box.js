@@ -42,7 +42,7 @@ class ContentBox extends Component {
 
 		return (
 			<BoxContainer right={right} innerRef={this.elem} inView={inView}>
-				<Box background={color} right={right} pose={animation}>
+				<Box background={color} right={right ? 1 : 0} pose={animation}>
 					<Divider color="red" width="60px" centered={false}/>
 					<Title>{title}</Title>
 					<Spec>{spec}</Spec>
