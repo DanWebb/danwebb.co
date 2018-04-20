@@ -1,17 +1,20 @@
 import styled from 'styled-components';
+import posed from 'react-pose';
+import {spring} from 'popmotion';
 import color from '../../../theme/color';
 import {colorType} from '../../../types';
 import breakpoint from '../../../theme/breakpoint';
 
-const Box = styled.div`
+const Box = styled(posed.div({
+	hideLeft: {x: '-130%'},
+	hideRight: {x: '130%'},
+	show: {
+		x: '0%',
+		transition: ({from, to}) => spring({from, to, stiffness: 110, damping: 13, mass: 1.5})
+	}
+}))`
 	border-radius: 3px;
 	padding: 20px 25px 20px 25px;
-	z-index: 3;
-	width: calc(100% - 30px);
-	max-width: 345px;
-	position: relative;
-  top: -100px;
-	margin: 55px auto 0 auto;
 
 	&::before,
 	&::after {
@@ -40,29 +43,10 @@ const Box = styled.div`
 		z-index: -2;
 	}
 
-	${props => breakpoint('medium', `
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		margin: 0;
-
-		${props.right ? `
-			right: 30px;
-		` : `
-			left: 30px;
-		`};
-
+	${breakpoint('medium', `
 		&::after {
 			display: block;
 		}
-	`)}
-
-	${props => breakpoint('large', `
-		${props.right ? `
-			right: 0;
-		` : `
-			left: 0;
-		`};
 	`)}
 `;
 
