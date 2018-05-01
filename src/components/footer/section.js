@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import color from '../../theme/color';
 import breakpoint from '../../theme/breakpoint';
+import settings from '../../theme/settings';
 
 const Section = styled.footer`
 	background: ${color.amaranth};
@@ -10,7 +11,7 @@ const Section = styled.footer`
 	> div {
 		display: flex;
 		flex-wrap: wrap;
-		max-width: 1055px;
+		max-width: ${settings.containerWidth};
 		margin: 0 auto;
 		padding: 50px 0 30px 0;
 	}
@@ -30,11 +31,11 @@ const Section = styled.footer`
 		}
 
 		> div > div:nth-child(2) {
-			width: 57.142857143%;
+			width: 56.142857143%;
 		}
 
 		> div > div:nth-child(3) {
-			width: 28.571428571%;
+			width: 29.571428571%;
 		}
 	`)}
 `;

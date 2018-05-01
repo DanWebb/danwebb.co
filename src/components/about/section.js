@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import breakpoint from '../../theme/breakpoint';
+import settings from '../../theme/settings';
 
 const Section = styled.section`
 	position: relative;
@@ -7,7 +8,7 @@ const Section = styled.section`
 	padding: 0 30px;
 
 	> div {
-		max-width: 1055px;
+		max-width: ${settings.containerWidth};
 		margin: 0 auto;
 	}
 
