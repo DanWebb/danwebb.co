@@ -21,6 +21,14 @@ const getRoutes = async () => {
 			getData: () => ({page})
 		}))
 	}, {
+		path: '/journal',
+		component: 'src/pages/journal',
+		children: content.journal.map(post => ({
+			path: post.handle,
+			component: 'src/pages/page',
+			getData: () => ({post})
+		}))
+	}, {
 		is404: true,
 		component: 'src/pages/not-found'
 	}];
