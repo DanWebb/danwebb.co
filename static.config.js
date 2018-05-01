@@ -27,6 +27,7 @@ const getRoutes = async () => {
 };
 
 export default {
+	siteRoot: 'https://danwebb.co',
 	getRoutes,
 	renderToHtml,
 	Document
