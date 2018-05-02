@@ -1,7 +1,8 @@
 const breakpoints = {
 	small: 550,
 	medium: 834,
-	large: 1000
+	large: 1000,
+	xlarge: 1200
 };
 
 const breakpoint = (size, css) => `

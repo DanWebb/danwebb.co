@@ -6,14 +6,16 @@ import Content from './content';
 import Title from './title';
 import Text from './text';
 import Circle from './circle';
+import Image from './image';
 
 const Banner = ({color, title, text, image}) => (
 	<Section color={color}>
 		<Content>
 			<Circle color={color === 'red' ? 'white' : color}/>
-			<Title>{title}</Title>
-			<Text>{text}</Text>
+			{title && <Title>{title}</Title>}
+			{text && <Text>{text}</Text>}
 		</Content>
+		{image && <Image {...image}/>}
 	</Section>
 );
 

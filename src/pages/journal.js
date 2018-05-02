@@ -9,6 +9,7 @@ const Journal = () => (
 			color="red"
 			title="HI THERE - I’M DAN"
 			text="This is where I write about being a freelance web developer, making great things and exploring ideas, places, stories and thoughts."
+			image={{src: '/journal-banner.jpg', width: 1164, height: 844, alt: 'danwebb journal adventure'}}
 		/>
 		<br/>
 		<br/>
