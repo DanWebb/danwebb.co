@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import breakpoint from '../../../theme/breakpoint';
+import breakpoint from '../../theme/breakpoint';
 
 const Wrap = styled.div`
 	margin-top: 40px;

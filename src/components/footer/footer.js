@@ -6,10 +6,10 @@ import A, {InternalLink} from '../elements/a';
 import Divider from '../divider/divider';
 import Mobile from '../elements/mobile';
 import Desktop from '../elements/desktop';
+import Newsletter from '../newsletter/newsletter';
 import Section from './section';
 import Nav from './nav';
 import Subnav from './subnav';
-import Newsletter from './newsletter/newsletter';
 
 const Footer = () => (
 	<Section>

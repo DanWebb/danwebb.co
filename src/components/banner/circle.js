@@ -16,7 +16,7 @@ const Circle = styled.div`
 
 	${breakpoint('small', `
 		top: 40px;
-		left: -130px;
+		left: -140px;
 	`)}
 `;
 

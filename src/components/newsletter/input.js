@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import color from '../../../theme/color';
-import placeholder from '../../../theme/placeholder';
+import color from '../../theme/color';
+import placeholder from '../../theme/placeholder';
 
 const Input = styled.input`
 	background: transparent;
@@ -17,6 +17,12 @@ const Input = styled.input`
 	}
 
 	${placeholder('white')}
+
+	${props => props.dark && `
+		color: ${color.red};
+		border-bottom: 1px solid ${color.red};
+		${placeholder('red')}
+	`}
 `;
 
 export default Input;
