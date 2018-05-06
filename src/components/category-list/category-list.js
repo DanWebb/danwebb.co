@@ -22,7 +22,7 @@ CategoryList.propTypes = {
 		color: colorType.isRequired,
 		title: string.isRequired,
 		description: string.isRequired,
-		href: string.isRequired
+		handle: string.isRequired
 	})).isRequired
 };
 

@@ -7,8 +7,9 @@ import SidebarLayout from '../components/layout/sidebar-layout';
 import Banner from '../components/banner/banner';
 import Newsletter from '../components/newsletter/newsletter';
 import CategoryList from '../components/category-list/category-list';
+import Article from '../components/article/article';
 
-const Journal = ({intro, categories}) => (
+const Journal = ({intro, categories, articles}) => (
 	<Layout>
 		<Banner
 			color={intro.color}
@@ -17,7 +18,9 @@ const Journal = ({intro, categories}) => (
 			image={intro.image}
 		/>
 		<SidebarLayout>
-			<div/>
+			<div>
+				{articles.map(article => <Article key={article.handle} {...article}/>)}
+			</div>
 			<aside>
 				<Newsletter dark title/>
 				<CategoryList categories={categories}/>
@@ -33,6 +36,7 @@ Journal.propTypes = {
 		description: string,
 		image: imageType
 	}).isRequired,
+	articles: array.isRequired,
 	categories: array.isRequired
 };
 

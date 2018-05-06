@@ -30,19 +30,21 @@ const getRoutes = async () => {
 				description: 'This is where I write about being a freelance web developer, making great things and exploring ideas, places, stories and thoughts.',
 				image: {src: '/journal-banner.jpg', width: 1164, height: 844, alt: 'danwebb journal adventure'}
 			},
-			categories: content.categories.filter(c => c.title !== 'All')
+			categories: content.categories.filter(c => c.title !== 'All'),
+			articles: content.journal
 		}),
 		children: content.categories.filter(c => c.title !== 'All').map(category => ({
 			path: category.handle,
 			component: 'src/pages/journal',
 			getData: () => ({
 				intro: category,
-				categories: content.categories.filter(c => c.handle !== category.handle)
+				categories: content.categories.filter(c => c.handle !== category.handle),
+				articles: content.journal.filter(article => article.category === category.handle)
 			})
-		})).concat(content.journal.map(post => ({
-			path: post.handle,
+		})).concat(content.journal.map(article => ({
+			path: article.handle,
 			component: 'src/pages/page',
-			getData: () => ({post})
+			getData: () => ({article})
 		})))
 	}, {
 		is404: true,
