@@ -3,13 +3,13 @@ import breakpoint from '../../theme/breakpoint';
 import settings from '../../theme/settings';
 
 const SidebarLayout = styled.div`
-	display: flex;
-	max-width: ${settings.containerWidth};
+	max-width: 500px;
 	margin: 0 auto;
-	padding: 110px 30px;
+	padding: 60px 30px;
 
 	${breakpoint('medium', `
-		padding: 110px 0;
+		max-width: ${settings.containerWidth};
+		display: flex;
 
 		> div {
 			width: 66.6666666%;
@@ -23,6 +23,10 @@ const SidebarLayout = styled.div`
 				margin-bottom: 40px;
 			}
 		}
+	`)}
+
+	${breakpoint('large', `
+		padding: 110px 0;
 	`)}
 `;
 

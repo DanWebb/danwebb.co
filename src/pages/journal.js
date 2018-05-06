@@ -4,6 +4,7 @@ import {withRouteData} from 'react-static';
 import {colorType, imageType} from '../types';
 import Layout from '../components/layout/layout';
 import SidebarLayout from '../components/layout/sidebar-layout';
+import Desktop from '../components/elements/desktop';
 import Banner from '../components/banner/banner';
 import Newsletter from '../components/newsletter/newsletter';
 import CategoryList from '../components/category-list/category-list';
@@ -22,7 +23,7 @@ const Journal = ({intro, categories, articles}) => (
 				{articles.map(article => <Article key={article.handle} {...article}/>)}
 			</div>
 			<aside>
-				<Newsletter dark title/>
+				<Desktop><Newsletter dark title/></Desktop>
 				<CategoryList categories={categories}/>
 			</aside>
 		</SidebarLayout>

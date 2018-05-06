@@ -5,7 +5,7 @@ category: development
 description: This is a test post that shows what a post will look like
 date: Jun 01 2018
 image:
-  src: /ao-nang.jpg
+  src: /oak.jpg
   width: 564
   height: 564
   alt: Logo

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {oneOf} from 'prop-types';
 import color from '../../theme/color';
 import font from '../../theme/font';
+import breakpoint from '../../theme/breakpoint';
 
 const categoryColors = {
 	work: color.purple,
@@ -12,10 +13,14 @@ const categoryColors = {
 
 const Category = styled.h5`
 	color: ${props => categoryColors[props.category]};
-	font-size: 11px;
+	font-size: 9px;
 	font-weight: ${font.semiBold};
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
+
+	${breakpoint('medium', `
+		font-size: 11px;
+	`)}
 `;
 
 Category.propTypes = {
