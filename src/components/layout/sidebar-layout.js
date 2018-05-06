@@ -18,6 +18,10 @@ const SidebarLayout = styled.div`
 
 		> aside {
 			width: 33.3333333%;
+
+			> div {
+				margin-bottom: 40px;
+			}
 		}
 	`)}
 `;

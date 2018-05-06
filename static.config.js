@@ -23,11 +23,27 @@ const getRoutes = async () => {
 	}, {
 		path: '/journal',
 		component: 'src/pages/journal',
-		children: content.journal.map(post => ({
+		getData: () => ({
+			intro: {
+				color: 'red',
+				title: 'HI THERE - I’M DAN',
+				description: 'This is where I write about being a freelance web developer, making great things and exploring ideas, places, stories and thoughts.',
+				image: {src: '/journal-banner.jpg', width: 1164, height: 844, alt: 'danwebb journal adventure'}
+			},
+			categories: content.categories.filter(c => c.title !== 'All')
+		}),
+		children: content.categories.filter(c => c.title !== 'All').map(category => ({
+			path: category.handle,
+			component: 'src/pages/journal',
+			getData: () => ({
+				intro: category,
+				categories: content.categories.filter(c => c.handle !== category.handle)
+			})
+		})).concat(content.journal.map(post => ({
 			path: post.handle,
 			component: 'src/pages/page',
 			getData: () => ({post})
-		}))
+		})))
 	}, {
 		is404: true,
 		component: 'src/pages/not-found'

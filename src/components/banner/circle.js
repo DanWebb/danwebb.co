@@ -12,11 +12,10 @@ const Circle = styled.div`
 	width: 301px;
 	height: 301px;
 	z-index: 0;
-	opacity: 0.06;
+	opacity: 0.09;
 
 	${breakpoint('small', `
 		top: 40px;
-		left: -140px;
 	`)}
 `;
 
