@@ -11,6 +11,7 @@ const Category = styled(Link)`
 	margin: 13px 0;
 	opacity: 0.75;
 	max-width: 250px;
+	transition: all 0.2s linear;
 
 	h5 {
 		color: ${props => color[props.color]};
@@ -25,6 +26,11 @@ const Category = styled(Link)`
 		color: #777777;
 		font-size: 11px;
 		margin: 0;
+	}
+
+	&:hover {
+		opacity: 1;
+		border-width: 4px;
 	}
 `;
 
