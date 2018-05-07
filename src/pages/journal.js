@@ -6,6 +6,7 @@ import Layout from '../components/layout/layout';
 import SidebarLayout from '../components/layout/sidebar-layout';
 import Desktop from '../components/elements/desktop';
 import Banner from '../components/banner/banner';
+import Signup from '../components/newsletter/signup';
 import Newsletter from '../components/newsletter/newsletter';
 import CategoryList from '../components/category-list/category-list';
 import Article from '../components/article/article';
@@ -18,6 +19,7 @@ const Journal = ({intro, categories, articles}) => (
 			text={intro.description}
 			image={intro.image}
 		/>
+		<Signup/>
 		<SidebarLayout>
 			<div>
 				{articles.map(article => <Article key={article.handle} {...article}/>)}
