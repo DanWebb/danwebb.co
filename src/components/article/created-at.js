@@ -5,7 +5,7 @@ import breakpoint from '../../theme/breakpoint';
 const CreatedAt = styled.h6`
 	color: #C4C3C5;
 	font-weight: ${font.regular};
-	font-size: 10px;
+	font-size: 11px;
 	letter-spacing: 1.5px;
 	margin-top: 5px;
 

@@ -4,7 +4,7 @@ import color from '../../theme/color';
 import breakpoint from '../../theme/breakpoint';
 
 const Title = styled.h3`
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: ${font.semiBold};
 	letter-spacing: 2px;
 	color: ${color.black};

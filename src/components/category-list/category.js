@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import {Link} from 'react-static';
+import {colorType} from '../../types';
 import color from '../../theme/color';
 import font from '../../theme/font';
-import {colorType} from '../../types';
 
 const Category = styled(Link)`
 	display: block;
