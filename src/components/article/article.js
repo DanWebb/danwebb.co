@@ -3,7 +3,7 @@ import {string} from 'prop-types';
 import {imageType} from '../../types';
 import Container from './container';
 import Category from './category';
-import Title from './title';
+import ListingTitle from './listing-title';
 import Description from './description';
 import CreatedAt from './created-at';
 import Content from './content';
@@ -13,7 +13,7 @@ const Article = ({category, title, description, date, handle, image}) => (
 	<Container>
 		<Content to={`/journal/${handle}`}>
 			<Category category={category}>{category}</Category>
-			<Title>{title}</Title>
+			<ListingTitle>{title}</ListingTitle>
 			<Description>{description}</Description>
 			<CreatedAt>{date}</CreatedAt>
 		</Content>

@@ -43,7 +43,7 @@ const getRoutes = async () => {
 			})
 		})).concat(content.journal.map(article => ({
 			path: article.handle,
-			component: 'src/pages/page',
+			component: 'src/pages/article',
 			getData: () => ({article})
 		})))
 	}, {

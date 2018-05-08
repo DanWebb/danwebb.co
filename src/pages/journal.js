@@ -5,7 +5,6 @@ import {colorType, imageType} from '../types';
 import {breakpoints} from '../theme/breakpoint';
 import Layout from '../components/layout/layout';
 import SidebarLayout from '../components/layout/sidebar-layout';
-import Desktop from '../components/elements/desktop';
 import Banner from '../components/banner/banner';
 import Signup from '../components/newsletter/signup';
 import Newsletter from '../components/newsletter/newsletter';
@@ -25,7 +24,6 @@ class Journal extends Component {
 	render() {
 		const {intro, categories, articles} = this.props;
 		const {isMobile} = this.state;
-		console.log(isMobile, window.outerWidth, breakpoints.medium);
 
 		return (
 			<Layout>
@@ -41,7 +39,7 @@ class Journal extends Component {
 						{articles.map((article, i) => (
 							<div key={article.handle}>
 								<Article {...article}/>
-								{i === 1 && isMobile && <CategoryList categories={categories}/>}
+								{(i === 1 || articles.length === 1) && isMobile && <CategoryList categories={categories}/>}
 							</div>
 						))}
 					</div>
@@ -68,4 +66,4 @@ Journal.propTypes = {
 	categories: array.isRequired
 };
 
-export default () => <RouteData component={Journal}/>
+export default () => <RouteData component={Journal}/>;

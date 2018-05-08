@@ -10,3 +10,5 @@ image:
   height: 564
   alt: Logo
 ---
+
+Ahoy!
