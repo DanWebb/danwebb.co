@@ -9,6 +9,11 @@ image:
   width: 564
   height: 564
   alt: Logo
+featuredImage:
+  src: /walking.jpg
+  width: 960
+  height: 720
+  alt: Walking
 ---
 
 Ahoy!
