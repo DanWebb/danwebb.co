@@ -1,9 +1,9 @@
 import React from 'react';
 import settings from '../../theme/settings';
 import Span from '../elements/span';
+import Title from '../elements/underlined-title';
 import Button from '../button/button';
 import Section from './section';
-import Title from './title';
 
 const How = () => (
 	<Section background="buttermilk">

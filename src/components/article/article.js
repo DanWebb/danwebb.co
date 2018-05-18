@@ -6,17 +6,17 @@ import Category from './category';
 import ListingTitle from './listing-title';
 import Description from './description';
 import CreatedAt from './created-at';
-import Content from './content';
+import ListingContent from './listing-content';
 import Image from './image';
 
 const Article = ({category, title, description, date, handle, image}) => (
 	<Container>
-		<Content to={`/journal/${handle}`}>
+		<ListingContent to={`/journal/${handle}`}>
 			<Category category={category}>{category}</Category>
 			<ListingTitle>{title}</ListingTitle>
 			<Description>{description}</Description>
 			<CreatedAt>{date}</CreatedAt>
-		</Content>
+		</ListingContent>
 
 		{image.src && (
 			<Image to={`/journal/${handle}`} {...image}/>

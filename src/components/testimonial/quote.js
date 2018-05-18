@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import breakpoint from '../../theme/breakpoint';
-import quote from './quote.svg';
 
 const Quote = styled.div`
-	background-image: url(${quote});
+	background-image: url(/quote.svg);
 	background-size: 48px 36px;
 	background-position: left top;
 	background-repeat: no-repeat;

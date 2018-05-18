@@ -16,6 +16,7 @@ const color = {
 	buttermilk: '#fff5b1',
 	inspiraBlue: '#009ee2',
 	twitterBlue: '#1da1f2',
+	facebookBlue: '#3b5998',
 	instagramPurple: '#bc2a8d',
 	amaranth: '#e63c55'
 };

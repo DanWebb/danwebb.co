@@ -3,11 +3,12 @@ import jdown from 'jdown';
 import chokidar from 'chokidar';
 import Document from './src/components/document/document';
 import renderToHtml from './src/modules/render-styles';
+import renderer from './src/modules/markdown-renderer';
 
 chokidar.watch('src/content').on('all', () => reloadRoutes());
 
 const getRoutes = async () => {
-	const content = await jdown('src/content');
+	const content = await jdown('src/content', {renderer});
 	return [{
 		path: '/',
 		component: 'src/pages/home',
@@ -44,7 +45,7 @@ const getRoutes = async () => {
 		})).concat(content.journal.map(article => ({
 			path: article.handle,
 			component: 'src/pages/article',
-			getData: () => ({article})
+			getData: () => ({article, articles: content.journal})
 		})))
 	}, {
 		is404: true,

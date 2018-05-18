@@ -1,23 +1,47 @@
 import React from 'react';
-import {object} from 'prop-types';
-import {withRouteData} from 'react-static';
+import {object, array} from 'prop-types';
+import {withRouteData, Head} from 'react-static';
 import convert from 'htmr';
 import Layout from '../components/layout/layout';
 import MainTitle from '../components/article/main-title/main-title';
-import Text from '../components/elements/text';
+import Content from '../components/article/content';
+import Details from '../components/article/details/details';
+import Related from '../components/article/related/related';
 import FullWidthImage from '../components/elements/full-width-image';
 import FullWidthDivider from '../components/elements/full-width-divider';
+import Text from '../components/elements/text';
 
-const Article = ({article}) => (
+const Article = ({article, articles}) => (
 	<Layout>
+		<Head>
+			<meta name="title" content={article.title}/>
+			<meta name="description" content={article.description}/>
+			<meta property="twitter:title" content={article.title}/>
+			{article.featuredImage && <meta name="twitter:image:src" content={`https://${window.location.host}${article.featuredImage.src}`}/>}
+			<meta property="og:title" content={article.title}/>
+			<meta property="og:description" content={article.description}/>
+			{article.featuredImage && <meta property="og:image" content={`https://${window.location.host}${article.featuredImage.src}`}/>}
+			<meta property="og:type" content="article"/>
+			<meta property="og:url" content={window.location.href}/>
+		</Head>
+
 		<MainTitle category={article.category} title={article.title} createdAt={article.date}/>
+
 		{article.featuredImage ? <FullWidthImage {...article.featuredImage}/> : <FullWidthDivider/>}
-		<Text>{convert(article.contents)}</Text>
+
+		<Content>
+			<Text>{convert(article.contents)}</Text>
+			<Details title={article.title}/>
+			{article.related && (
+				<Related articles={articles.filter(a => article.related.indexOf(a.handle) > -1)}/>
+			)}
+		</Content>
 	</Layout>
 );
 
 Article.propTypes = {
-	article: object.isRequired
+	article: object.isRequired,
+	articles: array.isRequired
 };
 
 export default withRouteData(Article);

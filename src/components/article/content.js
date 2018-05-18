@@ -1,15 +1,9 @@
 import styled from 'styled-components';
-import {Link} from 'react-static';
-import breakpoint from '../../theme/breakpoint';
 
-const Content = styled(Link)`
-	width: 75%;
-	display: block;
-	padding-right: 30px;
-
-	${breakpoint('small', `
-		padding-right: 50px;
-	`)}
+const Content = styled.div`
+	max-width: 670px;
+	margin: 50px auto;
+	padding: 0 30px;
 `;
 
 export default Content;

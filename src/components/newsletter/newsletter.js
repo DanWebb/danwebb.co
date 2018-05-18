@@ -39,11 +39,11 @@ class Newsletter extends Component {
 			<Wrap>
 				{title && <H4>Stay up to date</H4>}
 
-				<Text>
+				<Text dark={this.props.dark}>
 					Join my occasional newsletter for product launches, availability, news and more.
 				</Text>
 
-				{message && <Text>{message}</Text>}
+				{message && <Text dark={this.props.dark}>{message}</Text>}
 
 				{!success && (
 					<Form noValidate>

@@ -1,7 +1,7 @@
 import React from 'react';
 import TwoColumns from '../elements/two-columns';
+import Title from '../elements/underlined-title';
 import Section from './section';
-import Title from './title';
 import Subtitle from './subtitle';
 import List from './list';
 
