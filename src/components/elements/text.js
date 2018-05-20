@@ -54,6 +54,7 @@ const Text = styled.div`
 
 	ul li,
 	ol li {
+		font-size: 16px;
 		position: relative;
 		padding-bottom: 4px;
 		margin-left: -5px;
@@ -193,6 +194,11 @@ const Text = styled.div`
 		p {
 			font-size: 18px;
 			line-height: 25px;
+		}
+
+		ul li,
+		ol li {
+			font-size: 18px;
 		}
 
 		.content-section {
