@@ -25,7 +25,7 @@ const Article = ({article, articles}) => (
 			<meta property="og:url" content={window.location.href}/>
 		</Head>
 
-		<MainTitle category={article.category} title={article.title} createdAt={article.date}/>
+		<MainTitle category={article.category} title={article.title} createdAt={article.date} medium={article.medium}/>
 
 		{article.featuredImage ? <FullWidthImage {...article.featuredImage}/> : <FullWidthDivider/>}
 

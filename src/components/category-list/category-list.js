@@ -10,7 +10,7 @@ const CategoryList = ({categories}) => (
 		<div>
 			<H4>Categories</H4>
 
-			{categories.map(category => (
+			{categories.map(category => !category.draft && (
 				<Category key={category.title} color={category.color} to={`/journal/${category.handle}`}>
 					<h5>{category.title}</h5>
 					<p>{category.description}</p>
