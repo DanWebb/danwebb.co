@@ -33,6 +33,8 @@ Your default browser should open up [http://localhost:3000/](http://localhost:30
 
 ## A Basic Animation
 
+![Animated Box](/journal-assets/popmotion/box.gif)
+
 We will need to start by installing react-pose which is distributed as an [NPM module](https://www.npmjs.com/package/react-pose) I'm also going to install [styled components](https://www.styled-components.com/) to add custom styles to the animated elements. You don't need to use Styled components for css but it works great with React Pose as their API is similar. Go back to the terminal and run:
 
 ```
@@ -160,7 +162,7 @@ class App extends Component {
 export default App;
 ```
 
-All we're doing here is toggling between the tow animation states "top" and "bottom" on the mouse enter event, instead of statically passing in the pose prop it's now based on `this.state.pose`.
+All we're doing here is toggling between the two animation states "top" and "bottom" on the mouse enter event, instead of statically passing in the pose prop it's now based on `this.state.pose`.
 
 Here's the result...
 
@@ -171,6 +173,8 @@ Here's the result...
 Go mental, combining the powerful re-usability of React components we can create effortlessly re-usable and compossible groups of individually animated elements.
 
 ![More Animations](/journal-assets/popmotion/go-mental.gif)
+
+See [this repo](https://github.com/DanWebb/react-popmotion-animation-example) for the full code behind this example.
 
 But of course we're only scratching the surface, animations defined with Popmotion pose don't need to be individual or even need to use the default animations, it's possible to:
 

@@ -15,20 +15,20 @@ const Text = styled.div`
 		font-weight: ${font.bold};
 		text-transform: uppercase;
 		letter-spacing: 3px;
-		margin-top: 25px;
+		margin-top: 50px;
 	}
 
 	h3 {
 		font-size: 16px;
 		font-weight: ${font.regular};
 		letter-spacing: 2px;
-		margin-top: 20px;
+		margin-top: 35px;
 	}
 
 	p {
 		font-size: 16px;
-		margin: 10px 0;
-		line-height: 22px;
+		margin: 10px 0 20px 0;
+		line-height: 25px;
 	}
 
 	a {
@@ -94,10 +94,27 @@ const Text = styled.div`
 		text-align: center;
 	}
 
+	code {
+		font-size: 13px;
+		line-height: 16px;
+		font-family: ${font.secondary};
+		background: rgba(249, 65, 93, 0.05);
+		padding: 5px;
+
+		.hljs-keyword {
+			color: ${color.red};
+		}
+	}
+
 	.content-section {
 		position: relative;
-		margin-bottom: 25px;
-		margin-top: 25px;
+		margin-bottom: 35px;
+		margin-top: 35px;
+
+		code {
+			background: transparent;
+			padding: 0;
+		}
 
 		.content {
 			background: rgba(249, 65, 93, 0.05);
@@ -173,15 +190,6 @@ const Text = styled.div`
 		}
 	}
 
-	code {
-		font-size: 14px;
-		line-height: 16px;
-
-		.hljs-keyword {
-			color: ${color.red};
-		}
-	}
-
 	${breakpoint('medium', `
 		h2 {
 			font-size: 26px;
@@ -193,7 +201,7 @@ const Text = styled.div`
 
 		p {
 			font-size: 18px;
-			line-height: 25px;
+			line-height: 28px;
 		}
 
 		ul li,
