@@ -6,6 +6,14 @@ import color from './color';
 const globalStyles = `
 	@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,600,700,800');
 
+	@font-face {
+    font-family: 'Hack';
+    src: url('/hack-regular-webfont.woff2') format('woff2'),
+         url('/hack-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+
 	${reset}
 
 	body {

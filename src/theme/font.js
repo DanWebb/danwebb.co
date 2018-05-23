@@ -5,6 +5,7 @@ const font = {
 	bold: 700,
 	extraBold: 800,
 	family: `'Dosis', sans-serif`,
+	secondary: `'Hack', monospace`,
 	weights: ['light', 'regular', 'semiBold', 'bold', 'extraBold']
 };
 

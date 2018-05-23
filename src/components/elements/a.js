@@ -13,7 +13,11 @@ const StyledA = styled.a`
 	position: relative;
 	display: inline-block;
 
-	${props => breakpoint('small', `
+	${props => props.underlined && `
+		border-bottom: 1px solid ${color[props.color]};
+	`}
+
+	${props => !props.underlined && breakpoint('small', `
 		&::after {
 			background: ${color[props.color]};
 			opacity: 0.4;
@@ -37,13 +41,14 @@ const StyledA = styled.a`
 
 const StyledLink = StyledA.withComponent(Link);
 
-const A = ({external, href, color, weight, children}) => (
+const A = ({external, href, color, weight, children, underlined}) => (
 	<StyledA
 		color={color}
 		weight={weight}
 		href={href}
 		rel={external && 'noopener noreferrer'}
 		target={external && '_blank'}
+		underlined={underlined}
 	>
 		{children}
 	</StyledA>
@@ -58,11 +63,13 @@ A.propTypes = {
 	children: node.isRequired,
 	external: bool,
 	color: colorType,
-	weight: fontType
+	weight: fontType,
+	underlined: bool
 };
 
 A.defaultProps = {
 	external: false,
+	underlined: false,
 	color: 'red',
 	weight: 'semiBold'
 };

@@ -3,11 +3,12 @@ import jdown from 'jdown';
 import chokidar from 'chokidar';
 import Document from './src/components/document/document';
 import renderToHtml from './src/modules/render-styles';
+import renderer from './src/modules/markdown-renderer';
 
 chokidar.watch('src/content').on('all', () => reloadRoutes());
 
 const getRoutes = async () => {
-	const content = await jdown('src/content');
+	const content = await jdown('src/content', {renderer});
 	return [{
 		path: '/',
 		component: 'src/pages/home',
@@ -20,6 +21,32 @@ const getRoutes = async () => {
 			component: 'src/pages/page',
 			getData: () => ({page})
 		}))
+	}, {
+		path: '/journal',
+		component: 'src/pages/journal',
+		getData: () => ({
+			intro: {
+				color: 'red',
+				title: 'HI THERE - I’M DAN',
+				description: 'This is where I write about being a freelance web developer, making great things and exploring ideas, places, stories and thoughts.',
+				image: {src: '/journal-banner.jpg', width: 1164, height: 844, alt: 'danwebb journal adventure'}
+			},
+			categories: content.categories.filter(c => c.title !== 'All'),
+			articles: content.journal
+		}),
+		children: content.categories.filter(c => c.title !== 'All').map(category => ({
+			path: category.handle,
+			component: 'src/pages/journal',
+			getData: () => ({
+				intro: category,
+				categories: content.categories.filter(c => c.handle !== category.handle),
+				articles: content.journal.filter(article => article.category === category.handle)
+			})
+		})).concat(content.journal.map(article => ({
+			path: article.handle,
+			component: 'src/pages/article',
+			getData: () => ({article, articles: content.journal})
+		})))
 	}, {
 		is404: true,
 		component: 'src/pages/not-found'

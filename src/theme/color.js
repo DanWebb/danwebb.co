@@ -3,7 +3,11 @@ const color = {
 	white: '#fff',
 	black: '#010101',
 	gray: '#6a6a6a',
-	green: '#7ed321',
+	purple: '#731dd8',
+	blue: '#23b5d3',
+	orange: '#fcab10',
+	green: '#bdd358',
+	lime: '#7ed321',
 	ice: '#b7e7dc',
 	lemon: '#f8e71c',
 	concrete: '#f3f3f3',
@@ -12,6 +16,7 @@ const color = {
 	buttermilk: '#fff5b1',
 	inspiraBlue: '#009ee2',
 	twitterBlue: '#1da1f2',
+	facebookBlue: '#3b5998',
 	instagramPurple: '#bc2a8d',
 	amaranth: '#e63c55'
 };

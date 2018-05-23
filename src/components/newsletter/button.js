@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import color from '../../../theme/color';
-import font from '../../../theme/font';
+import color from '../../theme/color';
+import font from '../../theme/font';
 
 const Button = styled.button`
 	background: ${color.white};
@@ -18,6 +18,11 @@ const Button = styled.button`
 	&:active {
 		outline: 0;
 	}
+
+	${props => props.dark && `
+		color: ${color.white};
+		background: ${color.red};
+	`}
 `;
 
 export default Button;

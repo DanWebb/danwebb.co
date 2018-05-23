@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {bool} from 'prop-types';
 import fetchJsonp from 'fetch-jsonp';
+import H4 from '../elements/h4';
 import Wrap from './wrap';
 import Text from './text';
 import Form from './form';
@@ -31,14 +33,17 @@ class Newsletter extends Component {
 
 	render() {
 		const {success, message} = this.state;
+		const {title} = this.props;
 
 		return (
 			<Wrap>
-				<Text>
+				{title && <H4>Stay up to date</H4>}
+
+				<Text dark={this.props.dark}>
 					Join my occasional newsletter for product launches, availability, news and more.
 				</Text>
 
-				{message && <Text>{message}</Text>}
+				{message && <Text dark={this.props.dark}>{message}</Text>}
 
 				{!success && (
 					<Form noValidate>
@@ -47,9 +52,10 @@ class Newsletter extends Component {
 							placeholder="you@email.com"
 							value={this.state.email}
 							onChange={this.handleChange}
+							dark={this.props.dark}
 						/>
 
-						<Button onClick={this.handleSubmit}>
+						<Button onClick={this.handleSubmit} dark={this.props.dark}>
 							Join
 						</Button>
 					</Form>
@@ -58,5 +64,15 @@ class Newsletter extends Component {
 		);
 	}
 }
+
+Newsletter.propTypes = {
+	dark: bool,
+	title: bool
+};
+
+Newsletter.defaultProps = {
+	dark: false,
+	title: false
+};
 
 export default Newsletter;
