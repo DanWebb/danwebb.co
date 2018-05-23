@@ -6,7 +6,7 @@ import Text from '../elements/text';
 import Layout from './layout';
 
 const PageLayout = ({children, title}) => (
-	<Layout>
+	<Layout title={title}>
 		<PageWrap>
 			<PageTitle>{title}</PageTitle>
 			<Text>{children}</Text>

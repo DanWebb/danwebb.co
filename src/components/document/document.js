@@ -1,6 +1,6 @@
 import React from 'react';
 import {any, node, object} from 'prop-types';
-import gtag from '../../modules/gtag.js';
+import gtag from '../../modules/gtag';
 
 const Document = ({Html, Head, Body, children, renderMeta}) => (
 	<Html>
@@ -10,12 +10,6 @@ const Document = ({Html, Head, Body, children, renderMeta}) => (
 			<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
 			<title>danwebb</title>
-			<meta name="description" content="Dan Webb - coder, thinker, maker, explorer. Create something great."/>
-			<meta itemProp="name" content="danwebb"/>
-			<meta itemProp="url" content="https://danwebb.co"/>
-			<meta itemProp="image" content="https://danwebb.co/fb-logo.png"/>
-			<meta itemProp="thumbnailUrl" content="https://danwebb.co/square-logo.png"/>
-			<link rel="image_src" href="https://danwebb.co/fb-logo.png"/>
 
 			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
@@ -24,22 +18,6 @@ const Document = ({Html, Head, Body, children, renderMeta}) => (
 			<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f9415d"/>
 			<meta name="msapplication-TileColor" content="#f9415d"/>
 			<meta name="theme-color" content="#f9415d"/>
-
-			<meta property="og:site_name" content="danwebb.co"/>
-			<meta property="og:title" content="danwebb"/>
-			<meta property="og:url" content="https://danwebb.co"/>
-			<meta property="og:type" content="website"/>
-			<meta property="og:description" content="Dan Webb - coder, thinker, maker, explorer. Create something great."/>
-			<meta property="og:image" content="https://danwebb.co/fb-logo.png"/>
-			<meta property="og:image:width" content="1200"/>
-			<meta property="og:image:height" content="630"/>
-
-			<meta name="twitter:title" content="danwebb"/>
-			<meta name="twitter:creator" content="@danwebbbb"/>
-			<meta name="twitter:image" content="https://danwebb.co/square-logo.png"/>
-			<meta name="twitter:url" content="https://danwebb.co"/>
-			<meta name="twitter:card" content="summary"/>
-			<meta name="twitter:description" content="Dan Webb - coder, thinker, maker, explorer. Create something great."/>
 
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116654469-1"/>
 			<script dangerouslySetInnerHTML={{__html: gtag}}/>

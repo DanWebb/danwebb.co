@@ -9,16 +9,16 @@ import AvatarContainer from './avatar-container';
 import Avatar from './avatar';
 import P from './p';
 
-const tweet = title => `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(`"${title}"`)}&via=danwebbbb`;
-const facebook = () => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+const tweet = (title, handle) => `https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://danwebb.co/journal/${handle}`)}&text=${encodeURIComponent(`"${title}"`)}&via=danwebbbb`;
+const facebook = handle => `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://danwebb.co/journal/${handle}`)}`;
 
-const ArticleDetails = ({title}) => (
+const ArticleDetails = ({title, handle}) => (
 	<div>
 		<SeparatingText linePos="bottom">
 			Share this on {' '}
-			<A href={tweet(title)} color="twitterBlue" external>twitter</A>
+			<A href={tweet(title, handle)} color="twitterBlue" external>twitter</A>
 			{' '} or {' '}
-			<A href={facebook()} color="facebookBlue" external>facebook</A>
+			<A href={facebook(handle)} color="facebookBlue" external>facebook</A>
 		</SeparatingText>
 
 		<Container>
@@ -39,7 +39,8 @@ const ArticleDetails = ({title}) => (
 );
 
 ArticleDetails.propTypes = {
-	title: string.isRequired
+	title: string.isRequired,
+	handle: string.isRequired
 };
 
 export default ArticleDetails;

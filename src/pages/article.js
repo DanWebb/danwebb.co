@@ -16,13 +16,18 @@ const Article = ({article, articles}) => (
 		<Head>
 			<meta name="title" content={article.title}/>
 			<meta name="description" content={article.description}/>
-			<meta property="twitter:title" content={article.title}/>
-			{article.featuredImage && <meta name="twitter:image:src" content={`https://${window.location.host}${article.featuredImage.src}`}/>}
+			<meta itemProp="name" content={article.title}/>
+			<meta itemProp="url" content={`https://danwebb.co/journal/${article.handle}`}/>
+			{article.featuredImage && <meta itemProp="image" content={`https://danwebb.co${article.featuredImage.src}`}/>}
+			{article.image && <meta itemProp="thumbnailUrl" content={`https://danwebb.co${article.image.src}`}/>}
+			{article.image && <link rel="image_src" href={`https://danwebb.co${article.image.src}`}/>}
+			<meta name="twitter:title" content={article.title}/>
+			{article.image && <meta name="twitter:image:src" content={`https://danwebb.co${article.image.src}`}/>}
 			<meta property="og:title" content={article.title}/>
 			<meta property="og:description" content={article.description}/>
-			{article.featuredImage && <meta property="og:image" content={`https://${window.location.host}${article.featuredImage.src}`}/>}
+			{article.image && <meta property="og:image" content={`https://danwebb.co${article.image.src}`}/>}
 			<meta property="og:type" content="article"/>
-			<meta property="og:url" content={window.location.href}/>
+			<meta property="og:url" content={`https://danwebb.co/journal/${article.handle}`}/>
 		</Head>
 
 		<MainTitle category={article.category} title={article.title} createdAt={article.date} medium={article.medium}/>
@@ -31,7 +36,7 @@ const Article = ({article, articles}) => (
 
 		<Content>
 			<Text>{convert(article.contents)}</Text>
-			<Details title={article.title}/>
+			<Details title={article.title} handle={article.handle}/>
 			{article.related && (
 				<Related articles={articles.filter(a => article.related.indexOf(a.handle) > -1)}/>
 			)}
