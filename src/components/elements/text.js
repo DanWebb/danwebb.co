@@ -56,7 +56,7 @@ const Text = styled.div`
 	ol li {
 		font-size: 16px;
 		position: relative;
-		padding-bottom: 4px;
+		padding-bottom: 10px;
 		margin-left: -5px;
 	}
 
