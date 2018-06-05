@@ -3,7 +3,7 @@ image: /rachael-hall-large.jpg
 mobileImage: /rachael-hall-small.jpg
 title: Rachael Hall
 spec: / website / blog / paid membership
-summary: Rachael is an advanced franklin method educator helping people access the body of their dreams. I developed a paid members only courses area through a custom registration process and Stripe integration as well as a bespoke sales website. Both are backed by Prismic CMS to flexibly and intuitively manage all content from a single location.
+summary: Rachael is an Pilates teacher and advanced franklin method educator helping people access the body of their dreams. I created a bespoke sales website and paid members only courses area which has allowed Rachael to earn automated monthly recurring revenue and focus on providing the most valuable content for her students.
 visit: https://www.rachhall.com/
 color: ice
 hasCaseStudy: false

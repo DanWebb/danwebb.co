@@ -3,7 +3,7 @@ image: /wanderlust-large.jpg
 mobileImage: /wanderlust-small.jpg
 title: Wanderlust Life
 spec: / ecommerce / blog
-summary: Wanderlust life sells minimalist travel inspired jewellery based in North Devon, UK (home!). I collaborated with the design talent at Sunside Studio to develop an ecommerce website and blog based on Shopify and backed by advanced Mailchimp API integrations to sell their beautiful creations.
+summary: Wanderlust life sells minimalist travel inspired jewellery based in North Devon, UK (home!). I collaborated with the design talent at Sunside Studio to develop an ecommerce website and blog based on Shopify and backed by advanced Mailchimp API integrations to sell their beautiful creations and engage with their customers.
 visit: https://wanderlustlife.co.uk/
 color: potPourri
 hasCaseStudy: false

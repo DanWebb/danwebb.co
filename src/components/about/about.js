@@ -1,7 +1,7 @@
 import React from 'react';
 import {array} from 'prop-types';
 import {breakpoints} from '../../theme/breakpoint';
-import A, {InternalLink} from '../elements/a';
+import A from '../elements/a';
 import TwoColumns from '../elements/two-columns';
 import Span from '../elements/span';
 import Divider from '../divider/divider';
