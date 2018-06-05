@@ -9,10 +9,15 @@ chokidar.watch('src/content').on('all', () => reloadRoutes());
 
 const getRoutes = async () => {
 	const content = await jdown('src/content', {renderer});
+	const articles = content.journal.sort((a, b) => new Date(b.date) > new Date(a.date));
 	return [{
 		path: '/',
 		component: 'src/pages/home',
-		getData: () => ({projects: content.projects, testimonials: content.testimonials})
+		getData: () => ({
+			projects: content.projects,
+			testimonials: content.testimonials,
+			latestArticles: articles.slice(0, 2)
+		})
 	}, {
 		path: '/pages',
 		component: 'src/pages/not-found',
@@ -32,7 +37,7 @@ const getRoutes = async () => {
 				image: {src: '/journal-banner.jpg', width: 1164, height: 844, alt: 'danwebb journal adventure'}
 			},
 			categories: content.categories.filter(c => c.title !== 'All'),
-			articles: content.journal
+			articles
 		}),
 		children: content.categories.filter(c => c.title !== 'All').map(category => ({
 			path: category.handle,
@@ -40,12 +45,12 @@ const getRoutes = async () => {
 			getData: () => ({
 				intro: category,
 				categories: content.categories.filter(c => c.handle !== category.handle),
-				articles: content.journal.filter(article => article.category === category.handle)
+				articles: articles.filter(article => article.category === category.handle)
 			})
-		})).concat(content.journal.map(article => ({
+		})).concat(articles.map(article => ({
 			path: article.handle,
 			component: 'src/pages/article',
-			getData: () => ({article, articles: content.journal})
+			getData: () => ({article, articles})
 		})))
 	}, {
 		is404: true,

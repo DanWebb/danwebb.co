@@ -8,13 +8,20 @@ const Content = styled.div`
 
 	p {
 		margin-top: 30px;
-		letter-spacing: 3px;
+		letter-spacing: 2px;
 		font-size: 14px;
+		line-height: 20px;
+
+		span {
+			line-height: inherit;
+		}
 	}
 
 	${breakpoint('small', `
 		p {
 			font-size: 18px;
+			line-height: 27px;
+			letter-spacing: 2.5px;
 		}
 	`)}
 

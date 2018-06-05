@@ -114,8 +114,8 @@ The `parcel build` command will minify the code into an optimised production rea
 Writing out these long parcel commands all the time is becoming a chore, let's create a shortcut using NPM scripts in our `package.json` to handle watching and building the JS bundle for us:
 ```
 "scripts": {
-	"watch": "concurrently \"theme watch\" \"parcel watch scripts/scripts.js --out-dir assets --out-file scripts.js\"",
-	"build": "parcel build scripts/scripts.js --out-dir assets --out-file scripts.js"
+  "watch": "concurrently \"theme watch\" \"parcel watch scripts/scripts.js --out-dir assets --out-file scripts.js\"",
+  "build": "parcel build scripts/scripts.js --out-dir assets --out-file scripts.js"
 }
 ```
 The watch command uses [concurrently](https://www.npmjs.com/package/concurrently) so we don't have to run both `theme watch` and `parcel watch` separately. Concurrently is an NPM module so we will have to install it as a development dependency using:
@@ -158,9 +158,9 @@ Next I'm going to add two files `/templates/search.json.liquid` to provide a URL
   {% for item in search.results %}
     {
       "title": {{ item.title | highlight: search.terms | json }},
-			"url": {{ item.url | within: item.collections.last | json }},
-			"price": {{ item.price | json }},
-			"featured_image": {{ item.featured_image.src | json }}
+      "url": {{ item.url | within: item.collections.last | json }},
+      "price": {{ item.price | json }},
+      "featured_image": {{ item.featured_image.src | json }}
     }
     {% unless forloop.last %},{% endunless %}
   {% endfor %}
@@ -176,38 +176,38 @@ And `/scripts/search.js` to handle updating the search results while the custome
 const getResults = query => $.getJSON(`/search?view=json&q=${query}`);
 
 const generateItemHtml = item => `
-	<li class="list-view-item">
-		<a href="${item.url}" class="list-view-item__link">
-			<div class="list-view-item__image-column">
-				<div class="list-view-item__image-wrapper">
-					<img class="list-view-item__image" src="${item.featured_image}">
-				</div>
-			</div>
+  &lt;li class="list-view-item">
+    <a href="${item.url}" class="list-view-item__link">
+      <div class="list-view-item__image-column">
+        <div class="list-view-item__image-wrapper">
+          <img class="list-view-item__image" src="${item.featured_image}">
+        </div>
+      </div>
 
-			<div class="list-view-item__title-column">
-				<div class="list-view-item__title">${item.title}</div>
-			</div>
+      <div class="list-view-item__title-column">
+        <div class="list-view-item__title">${item.title}</div>
+      </div>
 
-			<div class="list-view-item__price-column">
-				<div class="product-price">
-					<span class="product-price__price">${item.price}</span>
-				</div>
-			</div>
-		</a>
-	</li>
+      <div class="list-view-item__price-column">
+        <div class="product-price">
+          <span class="product-price__price">${item.price}</span>
+        </div>
+      </div>
+    </a>
+  </li>
 `;
 
 const updateSearchText = (query, count) => $('h1').html(`
-	<span class="visuallyhidden">Search result:</span>
-	${count} results for "${query}"
+  &lt;span class="visuallyhidden">Search result:</span>
+  ${count} results for "${query}"
 `);
 
 const search = async e => {
-	const query = e.target.value;
-	const {results, count} = await getResults(query);
-	const html = results.map(generateItemHtml).join('');
-	$('.list-view-items').empty().append(html);
-	updateSearchText(query, count);
+  const query = e.target.value;
+  const {results, count} = await getResults(query);
+  const html = results.map(generateItemHtml).join('');
+  $('.list-view-items').empty().append(html);
+  updateSearchText(query, count);
 }
 
 export default () => $(() => $('#SearchInput').keyup(search));
@@ -220,7 +220,7 @@ import './core/theme.js';
 import search from './search';
 
 if (window.location.pathname === '/search') {
-	search();
+  search();
 }
 ```
 Here's the result, much better 😊
@@ -230,19 +230,19 @@ Here's the result, much better 😊
 Hold up! Just one last thing...The formatting of the price looks off. Thinking about this problem, it's very likely at some point we will need to use JS to format prices elsewhere on the site. Rather than creating a solution specific to the search module let's create a re-usable utility function for formatting any money amounts under `/scripts/utils/format-money.js`
 ```
 const formatMoney = amount => {
-	const roundNumber = (num, dec) => Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+  const roundNumber = (num, dec) => Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
 
-	if (amount) {
-		// Make sure "amount" is in cents
-		if (String(amount).indexOf('.') > -1) {
-			amount = Number(amount) * 100;
-		}
-		amount = (amount / 100).toFixed(2);
-	} else {
-		amount = 0.00;
-	}
+  if (amount) {
+    // Make sure "amount" is in cents
+    if (String(amount).indexOf('.') > -1) {
+      amount = Number(amount) * 100;
+    }
+    amount = (amount / 100).toFixed(2);
+  } else {
+    amount = 0.00;
+  }
 
-	return `$${amount}`;
+  return `$${amount}`;
 };
 
 export default formatMoney;
@@ -254,38 +254,38 @@ import formatMoney from './utils/format-money';
 const getResults = query => $.getJSON(`/search?view=json&q=${query}`);
 
 const generateItemHtml = item => `
-	<li class="list-view-item">
-		<a href="${item.url}" class="list-view-item__link">
-			<div class="list-view-item__image-column">
-				<div class="list-view-item__image-wrapper">
-					<img class="list-view-item__image" src="${item.featured_image}">
-				</div>
-			</div>
+  &lt;li class="list-view-item">
+    <a href="${item.url}" class="list-view-item__link">
+      <div class="list-view-item__image-column">
+        <div class="list-view-item__image-wrapper">
+          <img class="list-view-item__image" src="${item.featured_image}">
+        </div>
+      </div>
 
-			<div class="list-view-item__title-column">
-				<div class="list-view-item__title">${item.title}</div>
-			</div>
+      <div class="list-view-item__title-column">
+        <div class="list-view-item__title">${item.title}</div>
+      </div>
 
-			<div class="list-view-item__price-column">
-				<div class="product-price">
-					<span class="product-price__price">${formatMoney(item.price)}</span>
-				</div>
-			</div>
-		</a>
-	</li>
+      <div class="list-view-item__price-column">
+        <div class="product-price">
+          <span class="product-price__price">${formatMoney(item.price)}</span>
+        </div>
+      </div>
+    </a>
+  </li>
 `;
 
 const updateSearchText = (query, count) => $('h1').html(`
-	<span class="visuallyhidden">Search result:</span>
-	${count} results for "${query}"
+  &lt;span class="visuallyhidden">Search result:</span>
+  ${count} results for "${query}"
 `);
 
 const search = async e => {
-	const query = e.target.value;
-	const {results, count} = await getResults(query);
-	const html = results.map(generateItemHtml).join('');
-	$('.list-view-items').empty().append(html);
-	updateSearchText(query, count);
+  const query = e.target.value;
+  const {results, count} = await getResults(query);
+  const html = results.map(generateItemHtml).join('');
+  $('.list-view-items').empty().append(html);
+  updateSearchText(query, count);
 }
 
 export default () => $(() => $('#SearchInput').keyup(search));

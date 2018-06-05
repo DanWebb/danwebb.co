@@ -9,7 +9,7 @@ import Testimonial from '../components/testimonial/testimonial';
 import Services from '../components/services/services';
 import About from '../components/about/about';
 
-const Home = ({projects, testimonials}) => (
+const Home = ({projects, testimonials, latestArticles}) => (
 	<Layout>
 		<Introduction/>
 		<Project {...projects[0]}/>
@@ -21,13 +21,14 @@ const Home = ({projects, testimonials}) => (
 			{convert(testimonials[1].contents)}
 		</Testimonial>
 		<Services/>
-		<About/>
+		<About latestArticles={latestArticles}/>
 	</Layout>
 );
 
 Home.propTypes = {
 	projects: array.isRequired,
-	testimonials: array.isRequired
+	testimonials: array.isRequired,
+	latestArticles: array.isRequired
 };
 
 export default withRouteData(Home);
