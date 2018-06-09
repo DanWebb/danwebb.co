@@ -57,7 +57,7 @@
     "eslint-config-react-tools": "1.x.x",
     "eslint-config-xo-react": "0.13.0",
     "htmr": "0.6.3",
-    "jdown": "0.1.0",
+    "jdown": "0.5.1",
     "serve": "^6.1.0",
     "xo": "^0.20"
   }
