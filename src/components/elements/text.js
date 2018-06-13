@@ -35,8 +35,10 @@ const Text = styled.div`
 		font-weight: ${font.medium};
 	}
 
-	img {
-		width: 100%;
+	img,
+	iframe,
+	video {
+		max-width: 100%;
 		margin: 35px 0;
 		display: block;
 	}
