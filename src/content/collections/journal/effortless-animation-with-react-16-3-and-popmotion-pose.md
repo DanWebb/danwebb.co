@@ -11,7 +11,8 @@ image:
   alt: Custom Animation
 medium: https://itnext.io/effortless-animation-with-react-16-3-and-popmotion-pose-674dac34b3c1
 related:
-  - better-shopify-theme-development-with-parcel-js 
+  - better-shopify-theme-development-with-parcel-js
+  - how-to-build-complicated-grids-using-css-grid
 ---
 
 [Popmotion Pose](https://popmotion.io/pose/) is described as a "Declarative motion system for HTML, SVG, React & React Native", it builds upon the author Matt Perry's work on [Popmotion](https://popmotion.io/) to expose a simpler way to declare animations. In this article we're going to look at how it can be used with React via [react-pose](https://www.npmjs.com/package/react-pose) to effortlessly build animations with React that look great.

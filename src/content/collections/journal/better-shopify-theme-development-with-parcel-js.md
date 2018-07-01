@@ -17,6 +17,7 @@ image:
 medium: https://medium.com/@danwebb/better-shopify-theme-development-with-parcel-js-704f17f367fc
 related:
   - effortless-animation-with-react-16-3-and-popmotion-pose
+  - how-to-build-complicated-grids-using-css-grid
 ---
 
 [Shopify's slate](https://github.com/Shopify/slate), especially the new v1 release, is a great tool to improve the Shopify theme development workflow. For me one of the core benefits is getting to use new language features and organise JS code into different folders with [ES6 imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import).
@@ -35,7 +36,7 @@ Presuming you have [Node JS](https://nodejs.org/en/) installed you can easily in
 ```
 npm install -g parcel-bundler
 ```
-![Installing Parcel](/journal-assets/parcel-shopify/install-parcel.gif)
+![Installing Parcel](./assets/install-parcel.gif)
 
 ### 2: Install Theme kit
 
